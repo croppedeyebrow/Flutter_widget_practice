@@ -50,33 +50,11 @@ class _MyHomePageState extends State<MyHomePage> {
             )
           ],
         )),
-        body: Container(
-          color: Colors.black54,
-          child: Stack(
-            children: [
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.red,
-              ),
-              Container(
-                  width: 200,
-                  height: 200,
-                  color: Colors.blue,
-                  margin: const EdgeInsets.only(top: 80, left: 60)),
-              Container(
-                  width: 200,
-                  height: 200,
-                  color: Colors.purple,
-                  margin: const EdgeInsets.only(top: 100, left: 100)),
-              Container(
-                  width: 200,
-                  height: 200,
-                  color: Colors.orange,
-                  margin: const EdgeInsets.only(top: 150, left: 150))
-            ],
-          ),
-        ),
+        body: Center(
+            child: TextButton(
+          onPressed: () => print("버튼작동"),
+          child: const Text("플러터 텍스트  버튼"),
+        )),
         floatingActionButton: FloatingActionButton(
             onPressed: () => print("버튼작동"), child: const Icon(Icons.category)));
   }
