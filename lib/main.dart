@@ -50,8 +50,37 @@ class _MyHomePageState extends State<MyHomePage> {
             )
           ],
         )),
-        body: const Center(
-          child: Text('플러터 개발 공부를 시작해보자'),
+        body: Container(
+          alignment: Alignment.topCenter,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Container(
+                  width: MediaQuery.of(context).size.width / 2,
+                  height: 180,
+                  color: Colors.purple,
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width / 2,
+                  height: 180,
+                  color: Colors.black12,
+                )
+              ]),
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Container(
+                  width: MediaQuery.of(context).size.width / 2,
+                  height: 180,
+                  color: Colors.green,
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width / 2,
+                  height: 180,
+                  color: Colors.orange,
+                )
+              ]),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
             onPressed: () => print("버튼작동"), child: const Icon(Icons.category)));
