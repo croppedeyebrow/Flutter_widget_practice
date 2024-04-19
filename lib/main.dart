@@ -51,34 +51,29 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         )),
         body: Container(
-          alignment: Alignment.topCenter,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          color: Colors.black54,
+          child: Stack(
             children: [
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: 180,
+              Container(
+                width: 200,
+                height: 200,
+                color: Colors.red,
+              ),
+              Container(
+                  width: 200,
+                  height: 200,
+                  color: Colors.blue,
+                  margin: const EdgeInsets.only(top: 80, left: 60)),
+              Container(
+                  width: 200,
+                  height: 200,
                   color: Colors.purple,
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: 180,
-                  color: Colors.black12,
-                )
-              ]),
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: 180,
-                  color: Colors.green,
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: 180,
+                  margin: const EdgeInsets.only(top: 100, left: 100)),
+              Container(
+                  width: 200,
+                  height: 200,
                   color: Colors.orange,
-                )
-              ]),
+                  margin: const EdgeInsets.only(top: 150, left: 150))
             ],
           ),
         ),
