@@ -51,19 +51,23 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ],
       )),
-      body: ListView(
+      body: Container(
+          child: Column(
         children: [
-          const Text('배우 : 노윤서'),
-          SizedBox(
-              child: Image(
-                image: NetworkImage(
-                    'https://cdnweb01.wikitree.co.kr/webdata/editor/202302/07/img_20230207172645_f26c1023.webp'),
-              ),
-              fit: BoxFit.cover,
-              height: 300,
-              width: MediaQuery.of(context).size.width),
+          Expanded(
+            flex: 1,
+            child: Container(
+              color: Colors.redAccent,
+            ),
+          ),
+          Flexible(
+            flex: 3,
+            child: Container(
+              color: Colors.blueAccent,
+            ),
+          ),
         ],
-      ),
+      )),
     );
   }
 }
