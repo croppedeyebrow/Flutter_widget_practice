@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+          // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          // useMaterial3: true,
+          ),
       home: const MyHomePage(),
     );
   }
@@ -34,36 +34,38 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepPurple,
-        title: const Text('플러터 개발자 도전기'),
+        title: const Text('플러터 개발자 도전기',
+            style: TextStyle(
+              color: Colors.white,
+            )),
+        centerTitle: true,
+        elevation: 4,
       ),
-      drawer: Drawer(
-          child: ListView(
-        padding: EdgeInsets.zero,
-        children: const <Widget>[
-          DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
-            child: Text("Drawer Header"),
-          ),
-          ListTile(
-            title: Text("1번 메뉴"),
-          )
-        ],
-      )),
       body: Container(
           child: Column(
         children: [
-          Expanded(
-            flex: 1,
-            child: Container(
-              color: Colors.redAccent,
+          Center(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 20),
+                  backgroundColor: Colors.redAccent),
+              onPressed: () => print("엘리베이티드 버튼 클릭"),
+              child: const Text('플러터 엘리베이티드 버튼'),
             ),
           ),
-          Flexible(
-            flex: 3,
-            child: Container(
-              color: Colors.blueAccent,
+          Center(
+            child: TextButton(
+              style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 20),
+                  backgroundColor: Colors.blueAccent),
+              onPressed: () => print("텍스트 버튼 클릭"),
+              child: const Text('플러터 텍스트 버튼'),
+            ),
+          ),
+          Center(
+            child: OutlinedButton(
+              onPressed: () => print("아웃라인 버튼 클릭"),
+              child: const Text('플러터 아웃라인드 버튼'),
             ),
           ),
         ],
