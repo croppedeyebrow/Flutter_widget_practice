@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice_01/second.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,34 +42,18 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         elevation: 4,
       ),
-      body: Container(
-          child: Column(
-        children: [
-          Center(
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 20),
-                  backgroundColor: Colors.redAccent),
-              onPressed: () => print("엘리베이티드 버튼 클릭"),
-              child: const Text('플러터 엘리베이티드 버튼'),
-            ),
-          ),
-          Center(
-            child: TextButton(
-              style: TextButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 20),
-                  backgroundColor: Colors.blueAccent),
-              onPressed: () => print("텍스트 버튼 클릭"),
-              child: const Text('플러터 텍스트 버튼'),
-            ),
-          ),
-          Center(
-            child: OutlinedButton(
-              onPressed: () => print("아웃라인 버튼 클릭"),
-              child: const Text('플러터 아웃라인드 버튼'),
-            ),
-          ),
-        ],
+      body: Center(
+          child: GestureDetector(
+        onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => SecondView(),
+            )),
+        child: Container(
+          padding: const EdgeInsets.all(8),
+          color: Colors.deepPurple,
+          child: const Text("시작"),
+        ),
       )),
     );
   }
