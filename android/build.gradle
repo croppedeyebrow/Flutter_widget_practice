@@ -5,8 +5,11 @@ buildscript {
         mavenCentral()
     }
 
-    dependencies {
+      dependencies {
+        // 플러그인 버전을 업데이트합니다.
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // Android Gradle 플러그인 버전을 업데이트합니다.
+        classpath 'com.android.tools.build:gradle:7.4.0' // 최신 버전으로 변경하세요.
     }
 }
 
